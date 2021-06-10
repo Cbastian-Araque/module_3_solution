@@ -1,0 +1,149 @@
+:root{
+    --color_primario: #b4f39b;
+    --color_secundario: #439ef3;
+    --color_terciario: #eb3737;
+    --color_negro: #000;
+    --color_blanco: #fff;
+    --color_opaco: rgba(0, 0, 0, 0.680);
+}
+
+*, ::after, ::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 16px;
+    color: var(--color_negro);
+    background: var(--color_primario);
+    font-family: monospace;
+}
+
+/* // *** HEADER *** */
+#header-nav{
+    background: var(--color_secundario);
+    border-radius: 0;
+    border: none;
+}
+
+.navbar-brand{
+    padding: 25px 0;
+    text-align: center;
+}
+
+.navbar-brand h1{ /*//nombre del restaurante*/
+    font-family: serif;
+    color: var(--color_terciario);
+    font-size: 1.7em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px var(--color_negro);
+    margin-top: 0;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus{
+    text-decoration: none;
+    color: var(--color_blanco);
+}
+
+#nav-list{
+    margin-top: 10px;
+}
+
+#nav-list a, #phone div{
+    color: var(--color_blanco);
+    text-align: center;
+}
+
+#nav-list a:hover{
+    background: var(--color_blanco);
+    color: var(--color_negro);
+    border-radius: 10px;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar{
+    border: 1px solid var(--color_negro);
+}
+
+#nav-list a:hover{
+    background: var(--color_blanco);
+    color: var(--color_negro);
+    border-radius: 10px;
+}
+
+#phone{
+    margin-top: 5px;
+}
+
+#phone a{ /*/numero de teléfono*/
+    text-align: right;
+    padding-bottom: 0;
+}
+
+/* Seccion de contenido */
+
+.box{
+    background: var(--color_secundario);
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    padding: 0;
+}
+
+#main-content{
+    width: 100%;
+}
+
+/*/ Pie de página*/
+.panel-footer{
+    margin-top: 30px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background: var(--color_terciario);
+    color: var(--color_blanco);
+    letter-spacing: 1.9px;
+    border-top: 0;
+}
+
+/* // ********* MEDIAQUERIS  */
+@media (min-width: 992px){
+
+    .col-sm-6 {
+        width: 45%;
+    }
+
+    .col-md-4 {
+        width: 30%;
+    }
+}
+
+
+/*  Dispositivos Extra pequeños */
+@media (max-width: 768px) {
+    .col-sm-6 {
+    width: 90%;
+}
+    .navbar-brand{
+        padding-top: 10px;
+        height: 40px;
+    }
+    .navbar-brand h1{ /* NOMBRE DEL RESTAURANTE*/
+        font-size: 5vw;
+    }
+    #collapsable-nav a{ /* TEXTO DEL MENU DE NAVEGACIÓN COLLAPSABLE */ 
+        font-size: 1.2em;
+    }
+}
+
+/* // Dispositivos super extra pequeños (iphone 4) */
+@media (max-width: 479px) {
+    .col-xxs-12{
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        float: left;
+        width: 100%;
+    }
+}
